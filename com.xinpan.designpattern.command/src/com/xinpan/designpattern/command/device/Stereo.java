@@ -20,11 +20,11 @@ public class Stereo {
 	}
 
 	public void on() {
-
+		System.out.println(type.type + " On");
 	}
 
 	public void off() {
-
+		System.out.println(type.type + " Off");
 	}
 	
 	public void setType(StereoType type){

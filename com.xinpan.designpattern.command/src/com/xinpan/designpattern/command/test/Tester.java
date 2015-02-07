@@ -21,40 +21,46 @@ import com.xinpan.designpattern.command.device.Stereo.StereoType;
 public class Tester {
 
 	public static void main(String[] args) {
-		RemoteControl control = new RemoteControl(7);
-		
+		int slots = 7;
+		RemoteControl control = new RemoteControl(slots);
+
 		// create Devices
 		Light livingRoomLigth = new LivingRoomLight();
 		Light kitchenLight = new KitchenLight();
 		CeilingFan livingRoomFan = new LivingRoomFan(Speed.MEDIUM);
 		Stereo stereo = new Stereo(StereoType.CD);
 		GarageDoor garageDoor = new GarageDoor();
-		
+
 		// create Devices commands
 		LightOnCommand livingRoomLightOnCommand = new LightOnCommand(livingRoomLigth);
 		LightOffCommand livingRoomLightOffCommand = new LightOffCommand(livingRoomLigth);
-		
+
 		LightOnCommand kitchenLightOnCommand = new LightOnCommand(kitchenLight);
 		LightOffCommand kitchenLightOffCommand = new LightOffCommand(kitchenLight);
-		
+
 		CeilingFanOnCommand livingRoonFanOnCommand = new CeilingFanOnCommand(livingRoomFan);
 		CeilingFanOffCommand livingRoonFanOffCommand = new CeilingFanOffCommand(livingRoomFan);
-		
+
 		StereoOnCommand stereoOnCommand = new StereoOnCommand(stereo);
 		StereoOffCommand stereoOffCommand = new StereoOffCommand(stereo);
-		
+
 		GarageDoorUpCommand garageDoorUpCommand = new GarageDoorUpCommand(garageDoor);
 		GarageDoorDownCommand garageDoorDownCommand = new GarageDoorDownCommand(garageDoor);
-		
+
 		// setCommand
 		control.setCommand(0, livingRoomLightOnCommand, livingRoomLightOffCommand);
 		control.setCommand(1, kitchenLightOnCommand, kitchenLightOffCommand);
 		control.setCommand(2, livingRoonFanOnCommand, livingRoonFanOffCommand);
 		control.setCommand(3, stereoOnCommand, stereoOffCommand);
 		control.setCommand(4, garageDoorUpCommand, garageDoorDownCommand);
-		
+
 		System.out.println(control);
-		
+
+		for (int i = 0; i < slots; i++) {
+			control.onButtonPressed(0);
+			control.offButtonPressed(0);
+		}
+
 	}
 
 }

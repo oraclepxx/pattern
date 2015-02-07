@@ -8,12 +8,12 @@ public class LivingRoomFan extends CeilingFan {
 
 	@Override
 	public void on() {
-		// TODO Auto-generated method stub
+		System.out.println("Living Room Fan On");
 	}
 
 	@Override
 	public void off() {
-		// TODO Auto-generated method stub
+		System.out.println("Living Room Fan Off");
 	}
 
 }
