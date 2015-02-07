@@ -1,13 +1,9 @@
 package com.xinpan.designpattern.command.device;
 
-public class Light {
+public abstract class Light {
 
-	public void on() {
-		System.out.println("Light on");
-	}
+	public abstract void on();
 
-	public void off() {
-		System.out.println("Light off");
-	}
+	public abstract void off();
 
 }
