@@ -54,11 +54,11 @@ public class Tester {
 		control.setCommand(3, stereoOnCommand, stereoOffCommand);
 		control.setCommand(4, garageDoorUpCommand, garageDoorDownCommand);
 
-		System.out.println(control);
+//		System.out.println(control);
 
 		for (int i = 0; i < slots; i++) {
-			control.onButtonPressed(0);
-			control.offButtonPressed(0);
+			control.onButtonPressed(i);
+			control.offButtonPressed(i);
 		}
 
 	}

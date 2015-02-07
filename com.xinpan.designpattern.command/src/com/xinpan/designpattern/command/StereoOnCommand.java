@@ -15,4 +15,9 @@ public class StereoOnCommand implements ICommand {
 		stereo.on();
 	}
 
+	@Override
+	public void undo() {
+		stereo.off();
+	}
+
 }

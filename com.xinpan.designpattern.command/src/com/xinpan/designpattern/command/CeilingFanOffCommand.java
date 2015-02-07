@@ -15,4 +15,9 @@ public class CeilingFanOffCommand implements ICommand {
 		ceilingFan.off();
 	}
 
+	@Override
+	public void undo() {
+		ceilingFan.on();
+	}
+
 }

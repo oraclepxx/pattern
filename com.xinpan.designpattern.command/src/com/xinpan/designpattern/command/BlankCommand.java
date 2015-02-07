@@ -7,4 +7,9 @@ public class BlankCommand implements ICommand {
 		
 	}
 
+	@Override
+	public void undo() {
+		
+	}
+
 }

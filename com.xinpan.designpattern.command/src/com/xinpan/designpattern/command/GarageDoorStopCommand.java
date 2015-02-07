@@ -15,4 +15,9 @@ public class GarageDoorStopCommand implements ICommand {
 		garageDoor.stop();
 	}
 
+	@Override
+	public void undo() {
+		garageDoor.up();
+	}
+
 }
