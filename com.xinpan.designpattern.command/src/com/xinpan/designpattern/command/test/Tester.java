@@ -25,9 +25,9 @@ public class Tester {
 		RemoteControl control = new RemoteControl(slots);
 
 		// create Devices
-		Light livingRoomLigth = new LivingRoomLight();
-		Light kitchenLight = new KitchenLight();
-		CeilingFan livingRoomFan = new LivingRoomFan(Speed.MEDIUM);
+		Light livingRoomLigth = new LivingRoomLight("LivingRoom");
+		Light kitchenLight = new KitchenLight("Kitchen");
+		CeilingFan livingRoomFan = new LivingRoomFan("LivingRoom", Speed.MEDIUM);
 		Stereo stereo = new Stereo(StereoType.CD);
 		GarageDoor garageDoor = new GarageDoor();
 

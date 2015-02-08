@@ -10,20 +10,38 @@ public abstract class CeilingFan {
 		Speed(String type) {
 			this.type = type;
 		}
-		
-		public String getSpeed(){
+
+		public String getSpeed() {
 			return type;
 		}
 	}
-	
+
+	private String type;
 	private Speed speed;
 
-	public CeilingFan(Speed speed) {
+	public CeilingFan(String type, Speed speed) {
+		this.type = type;
 		this.speed = speed;
 	}
 
-	public abstract void on();
+	public void high() {
 
-	public abstract void off();
+	}
+
+	public void medium() {
+
+	}
+
+	public void low() {
+
+	}
+
+	public void off() {
+
+	}
+
+	public Speed getSpeed() {
+		return speed;
+	}
 
 }
